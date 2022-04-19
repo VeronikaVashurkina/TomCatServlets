@@ -25,7 +25,7 @@
 </head>
 <body>
 <h1>Изменить самолет</h1>
-<form action="/demo_war_exploded/UpdateAirplaneServlet?id=<%listAir.get(0).getAirplaneId();%>" method="post">
+<form action="/demo_war_exploded/AddAirplaneServlet?id=<%listAir.get(0).getAirplaneId();%>" method="post">
   <div class="input">
     <label for="model">Модель</label>
     <input type="text" name="model" id="model" value=<%listAir.get(0).getAirplaneModel();%> required>
