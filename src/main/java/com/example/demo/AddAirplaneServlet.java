@@ -17,10 +17,15 @@ import java.util.List;
 public class AddAirplaneServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("All", new SQLQuery().selectAllFlight(new FlightQuery().selectAll()));
-        request.getSession().setAttribute("All", new SQLQuery().selectAllFlight(new FlightQuery().selectAll()));
-        RequestDispatcher rd = request.getRequestDispatcher("/AddAirplane.jsp");
-        rd.forward(request, response);
+        try {
+            request.setAttribute("All", new SQLQuery().selectAllFlight(new FlightQuery().selectAll()));
+            request.getSession().setAttribute("All", new SQLQuery().selectAllFlight(new FlightQuery().selectAll()));
+            RequestDispatcher rd = request.getRequestDispatcher("/AddAirplane.jsp");
+            rd.forward(request, response);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
@@ -30,9 +35,11 @@ public class AddAirplaneServlet extends HttpServlet {
             String model = request.getParameter("model");
             int kg = Integer.parseInt(request.getParameter("kg"));
             int flightId= Integer.parseInt(request.getParameter("flight_id"));
-
+            System.out.println(getId()+1);
             Airplane airplane = new Airplane(getId()+1, model, kg,flightId);
+            System.out.println("after insert");
             new SQLQuery().insert(new AirplaneQuery().insert(airplane.getAirplaneId(),airplane.getAirplaneModel(),airplane.getAirplaneCapacity(),airplane.getFlightId()));
+            System.out.println("before insert");
             response.sendRedirect("/demo_war_exploded/hello-servlet");
 
         } catch (Exception e) {
@@ -41,7 +48,7 @@ public class AddAirplaneServlet extends HttpServlet {
         }
     }
 
-    protected int getId(){
+    protected int getId() throws ClassNotFoundException {
         List<Airplane> list=(ArrayList)new SQLQuery().selectAllFlight(new FlightQuery().selectAll());
         int max=0;
         for (Airplane item : list){

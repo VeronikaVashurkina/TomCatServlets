@@ -40,8 +40,8 @@
                "<td>"+item.getAirplaneModel()+"</td>"+
             "<td>"+item.getAirplaneCapacity()+"</td>"+
             "<td>"+item.getFlightId()+"</td>"+
-            "<td><a href=\"edit_cap?id=${s.id}\">Редактировать</a></td>"+
-    "<td><a href=\"delete_cap?id=${s.id}\">Удалить</a></td>"+
+            "<td><a href=\"http://localhost:8086/demo_war_exploded/UpdateAirplaneServlet?id="+item.getFlightId()+"\">Редактировать</a></td>"+
+    "<td><a href=\"http://localhost:8086/demo_war_exploded/DeleteAirplaneServlet?id="+item.getFlightId()+"\">Удалить</a></td>"+
 
     "</tr>"
     );
@@ -50,5 +50,8 @@
     </table>
 </div>
 </div>
+<section class="link-main">
+    <a title="Главная страница" name="link" href="http://localhost:8086/demo_war_exploded/"> Вернуться на главную</a>
+</section>
 </body>
 </html>

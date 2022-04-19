@@ -14,10 +14,15 @@ public class AllAirplanesServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
-        request.setAttribute("All", new SQLQuery().selectAllAirplane(new AirplaneQuery().selectAll()));
-        request.getSession().setAttribute("All", new SQLQuery().selectAllAirplane(new AirplaneQuery().selectAll()));
-        RequestDispatcher rd = request.getRequestDispatcher("AllAirplanes.jsp");
-        rd.forward(request, response);
+        try {
+            request.setAttribute("All", new SQLQuery().selectAllAirplane(new AirplaneQuery().selectAll()));
+            request.getSession().setAttribute("All", new SQLQuery().selectAllAirplane(new AirplaneQuery().selectAll()));
+            RequestDispatcher rd = request.getRequestDispatcher("AllAirplanes.jsp");
+            rd.forward(request, response);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void destroy() {

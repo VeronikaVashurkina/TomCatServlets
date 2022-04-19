@@ -16,12 +16,13 @@ public  class SQLQuery {
     private static String user;
     private static String password;
 
-    public SQLQuery() {
+    public SQLQuery() throws ClassNotFoundException {
         try (FileInputStream in = new FileInputStream("C:\\Users\\Вероника\\Desktop\\8 семак\\kursovicWEB\\курсач\\TomCat\\src\\main\\resources\\application.properties")) {
             properties.load(in);
             url = properties.getProperty("jdbc.url");
             user = properties.getProperty("jdbc.user");
             password = properties.getProperty("jdbc.password");
+            Class.forName("org.postgresql.Driver");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -29,7 +30,7 @@ public  class SQLQuery {
         }
     }
 
-    public static void insert(String sql) {
+    public static void insert(String sql)  {
         try (Connection connection = DriverManager
                 .getConnection(url, user, password);
              Statement statement = connection.createStatement();) {
@@ -46,7 +47,7 @@ public  class SQLQuery {
 
     //selects /////////////////////
 
-    public static ArrayList<Airplane> selectAllAirplane(String sql) {
+    public static ArrayList<Airplane> selectAllAirplane(String sql)  {
         ArrayList<Airplane> records = new ArrayList<Airplane>();
         try (Connection connection = DriverManager
                 .getConnection(url, user, password);
@@ -67,7 +68,7 @@ public  class SQLQuery {
         return records;
     }
 
-    public static ArrayList<Airport> selectAllAirport(String sql) {
+    public static ArrayList<Airport> selectAllAirport(String sql)  {
         ArrayList<Airport> records = new ArrayList<Airport>();
         try (Connection connection = DriverManager
                 .getConnection(url, user, password);
@@ -87,7 +88,7 @@ public  class SQLQuery {
         return records;
     }
 
-    public static ArrayList<Flight> selectAllFlight(String sql) {
+    public static ArrayList<Flight> selectAllFlight(String sql)  {
         ArrayList<Flight> records = new ArrayList<Flight>();
         try (Connection connection = DriverManager
                 .getConnection(url, user, password);
@@ -110,7 +111,7 @@ public  class SQLQuery {
     }
 
 
-    public static ArrayList<Luggage> selectAllLuggage(String sql) {
+    public static ArrayList<Luggage> selectAllLuggage(String sql)  {
         ArrayList<Luggage> records = new ArrayList<Luggage>();
         try (Connection connection = DriverManager
                 .getConnection(url, user, password);
@@ -158,7 +159,7 @@ public  class SQLQuery {
 
 
 
-    public static void update(String sql) {
+    public static void update(String sql)  {
         try (Connection connection = DriverManager
                 .getConnection(url, user, password);
              Statement statement = connection.createStatement()) {
@@ -171,7 +172,7 @@ public  class SQLQuery {
         }
     }
 
-    public static void delete(String sql) {
+    public static void delete(String sql)  {
         try (Connection connection = DriverManager
                 .getConnection(url, user, password);
              Statement statement = connection.createStatement()

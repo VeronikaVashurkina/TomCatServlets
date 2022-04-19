@@ -26,14 +26,14 @@
 <form action="/demo_war_exploded/AddAirplaneServlet" method="post">
     <div class="input">
         <label for="model">Модель</label>
-        <input type="text" name="model" id="model">
+        <input type="text" name="model" id="model" required>
     </div>
 
     <div class="input">
         <label for="kg">Вместительность</label>
-        <input type="number" name="kg" id="kg">
+        <input type="number" name="kg" id="kg" required>
     </div>
-    <label class="flight_id">Выберете рейс: </label>
+    <label class="flight">Выберете рейс: </label>
     <select name="flight_id" required>
         <option selected>Выберите рейс</option>
         <%for (Flight item :
@@ -54,7 +54,7 @@
 </form>
 
 <section class="link-main">
-    <a title="Главная страница" name="link" href="index.html"> Вернуться на главную</a>
+    <a title="Главная страница" name="link" href="http://localhost:8086/demo_war_exploded/"> Вернуться на главную</a>
 </section>
 </body>
 </html>
