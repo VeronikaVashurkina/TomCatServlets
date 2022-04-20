@@ -16,14 +16,15 @@
 <html>
 <head>
     <title>Все самолеты</title>
+ <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/normalize.css"/>
+   <link rel="stylesheet" href="css/style.css"/>
+
 </head>
 <body>
-<h1>Все самолеты</h1>
-<div>
-    <div class="button login">
-        <button onclick="window.location.href = 'http://localhost:8086/demo_war_exploded/AddAirplaneServlet';"
-                style="background-color: white"><span>Добавить новый самолет</span> <i class="fa fa-check"></i></button>
-    </div>
+<h1 class="title">Все самолеты</h1>
+
     <table  class="table">
         <tr>
             <th >Код самолета</th>
@@ -48,8 +49,12 @@
 }%>
 
     </table>
+
+<div class="button login">
+<button class="button" onclick="window.location.href = 'http://localhost:8086/demo_war_exploded/AddAirplaneServlet';"
+><span>Добавить новый самолет</span> </button>
 </div>
-</div>
+
 <section class="link-main">
     <a title="Главная страница" name="link" href="http://localhost:8086/demo_war_exploded/"> Вернуться на главную</a>
 </section>

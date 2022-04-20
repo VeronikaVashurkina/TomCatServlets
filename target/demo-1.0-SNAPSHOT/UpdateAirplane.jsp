@@ -17,24 +17,24 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Изменить самолет</title>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/normalize.css"/>
    <link rel="stylesheet" href="css/style.css"/>
-   -->
+
 </head>
 <body>
-<h1>Изменить самолет</h1>
+<h1 class="title">Изменить самолет</h1>
 <form action="/demo_war_exploded/UpdateAirplaneServlet?id=<%out.println(listAir.get(0).getAirplaneId());%>" method="post">
   <div class="input">
     <label for="model">Модель</label>
     <input type="text" name="model" id="model" value="<%out.println(listAir.get(0).getAirplaneModel());%>" required>
-  </div>
 
-  <div class="input">
+
+
     <label for="kg">Вместительность</label>
     <input type="text" name="kg" id="kg" value="<%out.println(listAir.get(0).getAirplaneCapacity());%>" required>
-  </div>
+
   <label class="flight">Выберете рейс: </label>
   <select name="flight_id" required>
     <option selected>Выберите рейс</option>
@@ -44,12 +44,12 @@
       );
     }%>
   </select>
-
+  </div>
 
 
   <div class="button login">
-    <button style="width: 50%" type="submit">Сохранить</button>
-    <button style="width: 50%" onclick="window.location.href = 'http://localhost:8086/demo_war_exploded/hello-servlet';">Отмена</button>
+    <button class="button" type="submit">Сохранить</button>
+    <button class="button" onclick="window.location.href = 'http://localhost:8086/demo_war_exploded/hello-servlet';">Отмена</button>
   </div>
 
 

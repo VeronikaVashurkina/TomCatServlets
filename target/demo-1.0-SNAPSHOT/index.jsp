@@ -5,15 +5,14 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Аэропорты</title>
-<!--
+
 <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/normalize.css"/>
 <link rel="stylesheet" href="css/style.css"/>
--->
+
 </head>
 <body>
-<section class="text">
     <h1 class="title">
         База данных аэропортов
     </h1>
@@ -29,6 +28,6 @@
     </ul>
 
     </p>
-</section>
+
 </body>
 </html>
