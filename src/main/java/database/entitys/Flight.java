@@ -1,6 +1,8 @@
 package database.entitys;
 
 import java.sql.Time;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Flight {
@@ -15,6 +17,16 @@ public class Flight {
         this.flightName = flightName;
         this.flightDate = flightDate;
         this.flightTime = flightTime;
+        this.airportId = airportId;
+    }
+
+    public Flight(int flightId, String name, String date, String time, int airportId) throws ParseException {
+        this.flightId = flightId;
+        this.flightName = name;
+        SimpleDateFormat format = new SimpleDateFormat();
+        format.applyPattern("dd.MM.yyyy");
+        this.flightDate = format.parse(date);
+        this.flightTime = Time.valueOf(time);
         this.airportId = airportId;
     }
 

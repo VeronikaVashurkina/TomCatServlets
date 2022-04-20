@@ -49,13 +49,14 @@
   </div>
 
 
-  <div class="button login">
+
     <button class="button" type="submit">Сохранить</button>
-    <button class="button" onclick="window.location.href = 'http://localhost:8086/demo_war_exploded/hello-servlet';">Отмена</button>
-  </div>
-
-
 </form>
+    <button class="button" onclick="window.location.href = 'http://localhost:8086/demo_war_exploded/hello-servlet';">Отмена</button>
+
+
+
+
 
 <section class="link-main">
   <a title="Главная страница" name="link" href="http://localhost:8086/demo_war_exploded/"> Вернуться на главную</a>

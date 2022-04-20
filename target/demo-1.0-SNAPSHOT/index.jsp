@@ -20,10 +20,10 @@
         В базу данных  входят таблицы:
     <ul>
         <li><a title="Аэропорты" name="link"  href="AllAirportsServlet" > Аэропорты</a></li>
-        <li><a title="Рейсы" name="link" href=""> Рейсы</a></li>
+        <li><a title="Рейсы" name="link" href="AllFlightServlet"> Рейсы</a></li>
         <li><a title="Самолеты" name="link" href="hello-servlet"> Самолеты</a></li>
-        <li><a title="Пассажиры" name="link" href=""> Пассажиры</a></li>
-        <li><a title="Багаж" name="link" href=""> Багаж</a></li>
+        <li><a title="Пассажиры" name="link" href="AllPassengerServlet"> Пассажиры</a></li>
+        <li><a title="Багаж" name="link" href="AllLuggageServlet"> Багаж</a></li>
 
     </ul>
 
