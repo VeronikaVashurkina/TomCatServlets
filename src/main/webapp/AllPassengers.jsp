@@ -47,8 +47,8 @@
                 "<td>"+item.getPassengerSex()+"</td>"+
                 "<td>"+item.getPassengerPassword()+"</td>"+
                 "<td>"+item.getPassengerNationality()+"</td>"+
-                "<td><a href=\"http://localhost:8086/demo_war_exploded/UpdatePassengerServlet?id="+item.getAirplaneId()+"\">Редактировать</a></td>"+
-                "<td><a href=\"http://localhost:8086/demo_war_exploded/DeletePassengerServlet?id="+item.getAirplaneId()+"\">Удалить</a></td>"+
+                "<td><a href=\"http://localhost:8086/demo_war_exploded/UpdatePassengerServlet?id="+item.getPassengerId()+"\">Редактировать</a></td>"+
+                "<td><a href=\"http://localhost:8086/demo_war_exploded/DeletePassengerServlet?id="+item.getPassengerId()+"\">Удалить</a></td>"+
 
                 "</tr>"
         );

@@ -71,7 +71,7 @@
     <div class="button login">
         <button class="button" type="submit">Добавить</button>
         <button class="button"
-                onclick="window.location.href = 'http://localhost:8086/demo_war_exploded/AllPassengersServlet';">Отмена
+                onclick="window.location.href = 'http://localhost:8086/demo_war_exploded/AllPassengerServlet';">Отмена
         </button>
     </div>
 

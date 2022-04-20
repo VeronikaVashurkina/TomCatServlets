@@ -18,7 +18,7 @@ public class AddPassengerServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             request.setAttribute("All", new SQLQuery().selectAllAirplane(new AirplaneQuery().selectAll()));
-            request.getSession().setAttribute("All", new SQLQuery().selectAllAirport(new AirplaneQuery().selectAll()));
+            request.getSession().setAttribute("All", new SQLQuery().selectAllAirplane(new AirplaneQuery().selectAll()));
             RequestDispatcher rd = request.getRequestDispatcher("/AddPassenger.jsp");
             rd.forward(request, response);
         } catch (ClassNotFoundException e) {
@@ -35,11 +35,11 @@ public class AddPassengerServlet extends HttpServlet {
             String middleName = request.getParameter("middle_name");
             String sex = request.getParameter("sex");
             String password = request.getParameter("password");
-            String nationality = request.getParameter("nationality");
+            String nationality = request.getParameter("natio");
             int airplaneId= Integer.parseInt(request.getParameter("airplane_id"));
             Passenger airplane = new Passenger(getId()+1, surname,name,middleName,sex,password,nationality,airplaneId);
             new SQLQuery().insert(new PassengerQuery().insert(airplane.getPassengerId(),airplane.getPassengerSurname(),airplane.getPassengerName(),airplane.getPassengerMiddleName(),airplane.getPassengerSex(),airplane.getPassengerPassword(),airplane.getPassengerNationality(),airplane.getAirplaneId()));
-            response.sendRedirect("/demo_war_exploded/AllPassengersServlet");
+            response.sendRedirect("/demo_war_exploded/AllPassengerServlet");
 
         } catch (Exception e) {
             request.setAttribute("err", e.getMessage());

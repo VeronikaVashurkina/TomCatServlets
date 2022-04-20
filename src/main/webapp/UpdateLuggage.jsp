@@ -25,14 +25,14 @@
 </head>
 <body>
 <h1 class="title">Изменить багаж</h1>
-<form action="/demo_war_exploded/UpdateLuggageServlet?id=<%out.println(listAir.get(0).getLuggageId();%>" method="post">
+<form action="/demo_war_exploded/UpdateLuggageServlet?id=<%out.println(listAir.get(0).getLuggageId());%>" method="post">
     <div class="input">
         <label for="kg">Вес</label>
         <input type="text" name="kg" id="kg" value="<%out.println(listAir.get(0).getLuggageWeight());%>" required>
     </div>
     <div class="input">
-        <label class="flight">Выберете пассажира: </label>
-        <select name="flight_id" required>
+        <label class="passenger">Выберете пассажира: </label>
+        <select name="passenger_id" required>
             <option selected>Выберите пассажира</option>
             <%for (Passenger item :
                     listFly) {

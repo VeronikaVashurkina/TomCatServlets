@@ -40,9 +40,9 @@
         <input type="text" name="time" id="time" required>
     </div>
     <div class="input">
-        <label class="airport">Выберете Самолет: </label>
+        <label class="airport">Выберете аэропорт: </label>
         <select name="airport_id" required>
-            <option selected>Выберите Самолет</option>
+            <option selected>Выберите аэропорт</option>
             <%for (Airport item :
                     list) {
                 out.println("<option value=\""+item.getAirportId()+"\">"+item.getAirportId()+"</option>"

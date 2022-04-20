@@ -71,7 +71,7 @@
 
     <button class="button" type="submit">Сохранить</button>
 </form>
-<button class="button" onclick="window.location.href = 'http://localhost:8086/demo_war_exploded/AllPassengersServlet';">Отмена</button>
+<button class="button" onclick="window.location.href = 'http://localhost:8086/demo_war_exploded/AllPassengerServlet';">Отмена</button>
 
 
 

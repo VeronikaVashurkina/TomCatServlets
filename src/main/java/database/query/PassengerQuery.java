@@ -14,13 +14,13 @@ public class PassengerQuery {
         return "insert into passenger values ('" + passengerId + "', '" + passengerSurname + "', '" + passengerName + "', '" + passengerMiddleName +"', '" + passengerSex +"', '" + passengerPassword +"', '" + passengerNationality +"', '" + airplaneId + "');";
     }
     public String update(int passengerId, String newPassengerSurname, String newPassengerName, String newPassengerMiddleName,String newPassengerSex,String newPassengerPassword,String newPassengerNationality,int newAirplaneId){
-        return "update airplane set passenger_surname= '"+newPassengerSurname+"' where passenger_id= '"+passengerId+"' ;"+
-                "update airplane set passenger_name= '"+newPassengerName+"' where passenger_id= '"+passengerId+"' ;"+
-                "update airplane set passenger_middle_name= '"+newPassengerMiddleName+"' where passenger_id= '"+passengerId+"' ;"+
-                "update airplane set passenger_sex= '"+newPassengerSex+"' where passenger_id= '"+passengerId+"' ;"+
-                "update airplane set passenger_password= '"+newPassengerPassword+"' where passenger_id= '"+passengerId+"' ;"+
-                "update airplane set passenger_nationality= '"+newPassengerNationality+"' where passenger_id= '"+passengerId+"' ;"+
-                "update airplane set airplane_id= '"+newAirplaneId+"' where passenger_id= '"+passengerId+"' ;";
+        return "update passenger set passenger_surname= '"+newPassengerSurname+"' where passenger_id= '"+passengerId+"' ;"+
+                "update passenger set passenger_name= '"+newPassengerName+"' where passenger_id= '"+passengerId+"' ;"+
+                "update passenger set passenger_middle_name= '"+newPassengerMiddleName+"' where passenger_id= '"+passengerId+"' ;"+
+                "update passenger set passenger_sex= '"+newPassengerSex+"' where passenger_id= '"+passengerId+"' ;"+
+                "update passenger set passenger_password= '"+newPassengerPassword+"' where passenger_id= '"+passengerId+"' ;"+
+                "update passenger set passenger_nationality= '"+newPassengerNationality+"' where passenger_id= '"+passengerId+"' ;"+
+                "update passenger set airplane_id= '"+newAirplaneId+"' where passenger_id= '"+passengerId+"' ;";
     }
 }
 

@@ -28,8 +28,8 @@
 <form action="/demo_war_exploded/UpdateFlightServlet?id=<%out.println(listAir.get(0).getFlightId());%>" method="post">
   <div class="input">
 
-    <label for=""name">Название</label>
-    <input type="text" name="name" id=""name" value="<%out.println(listAir.get(0).getFlightTime());%>" required>
+    <label for="name">Название</label>
+    <input type="text" name="name" id="name" value="<%out.println(listAir.get(0).getFlightName());%>" required>
   </div>
 
   <div class="input">

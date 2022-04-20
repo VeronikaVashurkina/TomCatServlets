@@ -23,15 +23,15 @@
 </head>
 <body>
 <h1 class="title">Изменить аэропорт</h1>
-<form action="/demo_war_exploded/UpdateAirpoptServlet?id=<%out.println(listAir.get(0).getAirportId());%>" method="post">
+<form action="/demo_war_exploded/UpdateAirportServlet?id=<%out.println(listAir.get(0).getAirportId());%>" method="post">
     <div class="input">
-        <label for="model">Название</label>
-        <input type="text" name="model" id="model" value="<%out.println(listAir.get(0).getAirportName());%>" required>
+        <label for="name">Название</label>
+        <input type="text" name="name" id="name" value="<%out.println(listAir.get(0).getAirportName());%>" required>
     </div>
 
     <div class="input">
-        <label for="kg">Город</label>
-        <input type="text" name="kg" id="kg" value="<%out.println(listAir.get(0).getCity());%>" required>
+        <label for="city">Город</label>
+        <input type="text" name="city" id="city" value="<%out.println(listAir.get(0).getCity());%>" required>
 
 
     </div>
