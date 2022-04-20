@@ -36,7 +36,7 @@ public class UpdateAirplaneServlet extends HttpServlet {
         int flightId = Integer.parseInt(request.getParameter("flight_id"));
         Airplane airplane = new Airplane(Integer.parseInt(request.getParameter("id")), model, kg, flightId);
         try {
-            new SQLQuery().insert(new AirplaneQuery().update(airplane.getAirplaneId(), airplane.getAirplaneModel(), airplane.getAirplaneCapacity(), airplane.getFlightId()));
+            new SQLQuery().update(new AirplaneQuery().update(airplane.getAirplaneId(), airplane.getAirplaneModel(), airplane.getAirplaneCapacity(), airplane.getFlightId()));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }

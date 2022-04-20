@@ -43,8 +43,8 @@
                 "<td>"+item.getFlightDate()+"</td>"+
                 "<td>"+item.getFlightTime()+"</td>"+
                 "<td>"+item.getAirportId()+"</td>"+
-                "<td><a href=\"http://localhost:8086/demo_war_exploded/UpdateAirplaneServlet?id="+item.getFlightId()+"\">Редактировать</a></td>"+
-                "<td><a href=\"http://localhost:8086/demo_war_exploded/DeleteAirplaneServlet?id="+item.getFlightId()+"\">Удалить</a></td>"+
+                "<td><a href=\"http://localhost:8086/demo_war_exploded/UpdateFlightServlet?id="+item.getFlightId()+"\">Редактировать</a></td>"+
+                "<td><a href=\"http://localhost:8086/demo_war_exploded/DeleteFlightServlet?id="+item.getFlightId()+"\">Удалить</a></td>"+
 
                 "</tr>"
         );

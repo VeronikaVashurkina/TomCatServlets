@@ -36,7 +36,7 @@ public class UpdateAirportServlet extends HttpServlet {
         String city = request.getParameter("city");
         Airport airport = new Airport(Integer.parseInt(request.getParameter("id")), name,city);
         try {
-            new SQLQuery().insert(new AirportQuery().update(airport.getAirportId(), airport.getAirportName(),airport.getCity()));
+            new SQLQuery().update(new AirportQuery().update(airport.getAirportId(), airport.getAirportName(),airport.getCity()));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
