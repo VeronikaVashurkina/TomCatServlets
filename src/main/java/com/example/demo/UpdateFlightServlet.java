@@ -44,7 +44,7 @@ public class UpdateFlightServlet extends HttpServlet {
             e.printStackTrace();
         }
         try {
-            new SQLQuery().update(new FlightQuery().insert(airplane.getFlightId(),airplane.getFlightName(),airplane.getFlightDate(),airplane.getFlightTime(),airplane.getAirportId()));
+            new SQLQuery().update(new FlightQuery().update(airplane.getFlightId(),airplane.getFlightName(),airplane.getFlightDate(),airplane.getFlightTime(),airplane.getAirportId()));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
