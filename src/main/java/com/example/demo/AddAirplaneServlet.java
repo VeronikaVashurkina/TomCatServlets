@@ -2,6 +2,7 @@ package com.example.demo;
 
 import database.SQLQuery;
 import database.entitys.Airplane;
+import database.entitys.Flight;
 import database.query.AirplaneQuery;
 import database.query.FlightQuery;
 
@@ -35,11 +36,8 @@ public class AddAirplaneServlet extends HttpServlet {
             String model = request.getParameter("model");
             int kg = Integer.parseInt(request.getParameter("kg"));
             int flightId= Integer.parseInt(request.getParameter("flight_id"));
-            System.out.println(getId()+1);
             Airplane airplane = new Airplane(getId()+1, model, kg,flightId);
-            System.out.println("after insert");
             new SQLQuery().insert(new AirplaneQuery().insert(airplane.getAirplaneId(),airplane.getAirplaneModel(),airplane.getAirplaneCapacity(),airplane.getFlightId()));
-            System.out.println("before insert");
             response.sendRedirect("/demo_war_exploded/hello-servlet");
 
         } catch (Exception e) {
@@ -49,9 +47,9 @@ public class AddAirplaneServlet extends HttpServlet {
     }
 
     protected int getId() throws ClassNotFoundException {
-        List<Airplane> list=(ArrayList)new SQLQuery().selectAllFlight(new FlightQuery().selectAll());
+        List<Flight> list=(ArrayList)new SQLQuery().selectAllFlight(new FlightQuery().selectAll());
         int max=0;
-        for (Airplane item : list){
+        for (Flight item : list){
             int number=item.getFlightId();
             if(number>max)max=number;
         }

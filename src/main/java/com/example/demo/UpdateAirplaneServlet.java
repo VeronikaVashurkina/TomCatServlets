@@ -15,15 +15,17 @@ public class UpdateAirplaneServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            request.setAttribute("All", new SQLQuery().selectAllAirplane(new AirplaneQuery().select(Integer.parseInt(request.getParameter("id")))));
-            request.getSession().setAttribute("All", new SQLQuery().selectAllAirplane(new AirplaneQuery().select(Integer.parseInt(request.getParameter("id")))));
-            request.setAttribute("One", new SQLQuery().selectAllFlight(new FlightQuery().selectAll()));
-            request.getSession().setAttribute("One", new SQLQuery().selectAllFlight(new FlightQuery().selectAll()));
+            request.setAttribute("One", new SQLQuery().selectAllAirplane(new AirplaneQuery().select(Integer.parseInt(request.getParameter("id")))));
+            request.getSession().setAttribute("One", new SQLQuery().selectAllAirplane(new AirplaneQuery().select(Integer.parseInt(request.getParameter("id")))));
+            request.setAttribute("All", new SQLQuery().selectAllFlight(new FlightQuery().selectAll()));
+            request.getSession().setAttribute("All", new SQLQuery().selectAllFlight(new FlightQuery().selectAll()));
+
+
+        RequestDispatcher rd = request.getRequestDispatcher("/UpdateAirplane.jsp");
+        rd.forward(request, response);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        RequestDispatcher rd = request.getRequestDispatcher("/UpdateAirplane.jsp");
-        rd.forward(request, response);
     }
 
     @Override

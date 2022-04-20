@@ -10,8 +10,8 @@
 <%@ page import="database.entitys.Flight" %>
 <%@ page import="java.util.List" %>
 <%@ page import="database.entitys.Airplane" %>
-<% List<Flight> listFly=(ArrayList)session.getAttribute("One"); %>
-<% List<Airplane> listAir=(ArrayList)session.getAttribute("All"); %>
+<% List<Flight> listFly=(ArrayList)session.getAttribute("All"); %>
+<% List<Airplane> listAir=(ArrayList)session.getAttribute("One"); %>
 <html>
 <head>
   <meta charset="UTF-8"/>
@@ -25,15 +25,15 @@
 </head>
 <body>
 <h1>Изменить самолет</h1>
-<form action="/demo_war_exploded/AddAirplaneServlet?id=<%listAir.get(0).getAirplaneId();%>" method="post">
+<form action="/demo_war_exploded/UpdateAirplaneServlet?id=<%out.println(listAir.get(0).getAirplaneId());%>" method="post">
   <div class="input">
     <label for="model">Модель</label>
-    <input type="text" name="model" id="model" value=<%listAir.get(0).getAirplaneModel();%> required>
+    <input type="text" name="model" id="model" value="<%out.println(listAir.get(0).getAirplaneModel());%>" required>
   </div>
 
   <div class="input">
     <label for="kg">Вместительность</label>
-    <input type="number" name="kg" id="kg" value=<%listAir.get(0).getAirplaneCapacity();%> required>
+    <input type="text" name="kg" id="kg" value="<%out.println(listAir.get(0).getAirplaneCapacity());%>" required>
   </div>
   <label class="flight">Выберете рейс: </label>
   <select name="flight_id" required>

@@ -36,12 +36,12 @@
 
 <%for (Airplane item :
         list) {
-    out.println("<tr> "+"<td>"+item.getFlightId()+"</td>"+
+    out.println("<tr> "+"<td>"+item.getAirplaneId()+"</td>"+
                "<td>"+item.getAirplaneModel()+"</td>"+
             "<td>"+item.getAirplaneCapacity()+"</td>"+
             "<td>"+item.getFlightId()+"</td>"+
-            "<td><a href=\"http://localhost:8086/demo_war_exploded/UpdateAirplaneServlet?id="+item.getFlightId()+"\">Редактировать</a></td>"+
-    "<td><a href=\"http://localhost:8086/demo_war_exploded/DeleteAirplaneServlet?id="+item.getFlightId()+"\">Удалить</a></td>"+
+            "<td><a href=\"http://localhost:8086/demo_war_exploded/UpdateAirplaneServlet?id="+item.getAirplaneId()+"\">Редактировать</a></td>"+
+    "<td><a href=\"http://localhost:8086/demo_war_exploded/DeleteAirplaneServlet?id="+item.getAirplaneId()+"\">Удалить</a></td>"+
 
     "</tr>"
     );
