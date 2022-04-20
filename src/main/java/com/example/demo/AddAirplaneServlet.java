@@ -47,10 +47,10 @@ public class AddAirplaneServlet extends HttpServlet {
     }
 
     protected int getId() throws ClassNotFoundException {
-        List<Flight> list=(ArrayList)new SQLQuery().selectAllFlight(new FlightQuery().selectAll());
+        List<Airplane> list=(ArrayList)new SQLQuery().selectAllAirplane(new AirplaneQuery().selectAll());
         int max=0;
-        for (Flight item : list){
-            int number=item.getFlightId();
+        for (Airplane item : list){
+            int number=item.getAirplaneId();
             if(number>max)max=number;
         }
         return max;

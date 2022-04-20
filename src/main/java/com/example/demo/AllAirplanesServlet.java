@@ -11,7 +11,7 @@ import javax.servlet.annotation.*;
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class AllAirplanesServlet extends HttpServlet {
-
+@Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
         try {
@@ -25,6 +25,5 @@ public class AllAirplanesServlet extends HttpServlet {
 
     }
 
-    public void destroy() {
-    }
+
 }

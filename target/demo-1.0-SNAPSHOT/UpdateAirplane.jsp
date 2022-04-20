@@ -27,14 +27,16 @@
 <h1 class="title">Изменить самолет</h1>
 <form action="/demo_war_exploded/UpdateAirplaneServlet?id=<%out.println(listAir.get(0).getAirplaneId());%>" method="post">
   <div class="input">
+
     <label for="model">Модель</label>
     <input type="text" name="model" id="model" value="<%out.println(listAir.get(0).getAirplaneModel());%>" required>
+  </div>
 
-
-
+  <div class="input">
     <label for="kg">Вместительность</label>
     <input type="text" name="kg" id="kg" value="<%out.println(listAir.get(0).getAirplaneCapacity());%>" required>
-
+  </div>
+  <div class="input">
   <label class="flight">Выберете рейс: </label>
   <select name="flight_id" required>
     <option selected>Выберите рейс</option>

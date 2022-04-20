@@ -19,7 +19,7 @@
     <p class="description">
         В базу данных  входят таблицы:
     <ul>
-        <li><a title="Аэропорты" name="link"  href="" > Аэропорты</a></li>
+        <li><a title="Аэропорты" name="link"  href="AllAirportsServlet" > Аэропорты</a></li>
         <li><a title="Рейсы" name="link" href=""> Рейсы</a></li>
         <li><a title="Самолеты" name="link" href="hello-servlet"> Самолеты</a></li>
         <li><a title="Пассажиры" name="link" href=""> Пассажиры</a></li>
