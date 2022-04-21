@@ -32,7 +32,7 @@ public class AddAirplaneServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-
+            request.setCharacterEncoding("UTF-8");
             String model = request.getParameter("model");
             int kg = Integer.parseInt(request.getParameter("kg"));
             int flightId= Integer.parseInt(request.getParameter("flight_id"));

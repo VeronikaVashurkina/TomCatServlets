@@ -31,6 +31,7 @@ public class AddLuggageServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
+            request.setCharacterEncoding("UTF-8");
             int kg = Integer.parseInt(request.getParameter("kg"));
             int flightId= Integer.parseInt(request.getParameter("passenger_id"));
             Luggage airplane = new Luggage(getId()+1, kg,flightId);

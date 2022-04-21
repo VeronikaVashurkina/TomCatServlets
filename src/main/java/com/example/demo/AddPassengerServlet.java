@@ -30,6 +30,7 @@ public class AddPassengerServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
+            request.setCharacterEncoding("UTF-8");
             String surname = request.getParameter("surname");
             String name = request.getParameter("name");
             String middleName = request.getParameter("middle_name");

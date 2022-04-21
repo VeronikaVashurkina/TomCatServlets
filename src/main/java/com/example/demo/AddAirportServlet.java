@@ -24,7 +24,7 @@ public class AddAirportServlet extends HttpServlet {
         @Override
         protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             try {
-
+                request.setCharacterEncoding("UTF-8");
                 String name = request.getParameter("name");
                 String city = request.getParameter("city");
                 Airport airport= new Airport(getId()+1,name,city);

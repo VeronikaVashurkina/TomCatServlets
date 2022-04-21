@@ -31,7 +31,7 @@ public class AddFlightServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-
+            request.setCharacterEncoding("UTF-8");
             String name = request.getParameter("name");
             String date = request.getParameter("date");
             String time = request.getParameter("time");
