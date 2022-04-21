@@ -24,9 +24,11 @@ public class Flight {
         this.flightId = flightId;
         this.flightName = name;
         SimpleDateFormat format = new SimpleDateFormat();
-        format.applyPattern("dd.MM.yyyy");
+       // format.applyPattern("dd.MM.yyyy");
+        format.applyPattern("yyyy.MM.dd");
+
         this.flightDate = format.parse(date);
-        this.flightTime = Time.valueOf(time);
+        this.flightTime = Time.valueOf(time+":00");
         this.airportId = airportId;
     }
 

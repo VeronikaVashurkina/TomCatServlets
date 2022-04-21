@@ -34,11 +34,11 @@
 
   <div class="input">
     <label for="date">Дата</label>
-    <input type="text" name="date" id="date" value="<%out.println(listAir.get(0).getFlightDate());%>" required>
+    <input type="date" name="date" id="date" value="<%out.println(listAir.get(0).getFlightDate().toString().replace('-','.'));%>" required>
   </div>
   <div class="input">
     <label for="time">Время</label>
-    <input type="text" name="time" id="time" value="<%out.println(listAir.get(0).getFlightTime());%>" required>
+    <input type="time" name="time" id="time" value="<%out.println(listAir.get(0).getFlightTime());%>" required>
   </div>
   <div class="input">
     <label class="airport">Выберете аэропорт: </label>

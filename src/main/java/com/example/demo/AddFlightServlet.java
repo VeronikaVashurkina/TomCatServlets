@@ -33,7 +33,7 @@ public class AddFlightServlet extends HttpServlet {
         try {
             request.setCharacterEncoding("UTF-8");
             String name = request.getParameter("name");
-            String date = request.getParameter("date");
+            String date = request.getParameter("date").replace('-','.');
             String time = request.getParameter("time");
             int airportId= Integer.parseInt(request.getParameter("airport_id"));
             Flight airplane = new Flight(getId()+1, name, date,time,airportId);

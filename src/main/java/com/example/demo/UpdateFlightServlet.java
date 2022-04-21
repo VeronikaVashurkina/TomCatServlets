@@ -34,9 +34,10 @@ public class UpdateFlightServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         String name = request.getParameter("name");
-        String date = request.getParameter("date");
+        String date = request.getParameter("date").replace('-','.');
         String time = request.getParameter("time");
         int airportId= Integer.parseInt(request.getParameter("airport_id"));
+
         Flight airplane = null;
         try {
             airplane = new Flight(Integer.parseInt(request.getParameter("id")), name, date,time,airportId);
