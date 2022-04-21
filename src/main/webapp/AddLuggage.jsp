@@ -28,7 +28,7 @@
 
     <div class="input">
         <label for="kg">Вес</label>
-        <input type="text" name="kg" id="kg" required>
+        <input type="number" name="kg" id="kg" required>
     </div>
     <div class="input">
         <label class="passenger">Выберете пассажира: </label>

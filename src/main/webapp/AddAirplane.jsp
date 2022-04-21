@@ -33,7 +33,7 @@
 
     <div class="input">
         <label for="kg">Вместительность</label>
-        <input type="text" name="kg" id="kg" required>
+        <input type="number" name="kg" id="kg" required>
     </div>
     <div class="input">
     <label class="flight">Выберете рейс: </label>

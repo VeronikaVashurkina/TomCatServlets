@@ -34,7 +34,7 @@
 
   <div class="input">
     <label for="kg">Вместительность</label>
-    <input type="text" name="kg" id="kg" value="<%out.println(listAir.get(0).getAirplaneCapacity());%>" required>
+    <input type="number" name="kg" id="kg" value="<%out.println(listAir.get(0).getAirplaneCapacity());%>" required>
   </div>
   <div class="input">
   <label class="flight">Выберете рейс: </label>

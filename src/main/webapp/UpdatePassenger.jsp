@@ -48,7 +48,7 @@
     </div>
     <div class="input">
         <label for="password">Паспорт</label>
-        <input type="text" name="password" id="password" value="<%out.println(listAir.get(0).getPassengerPassword());%>" required>
+        <input type="number" name="password" id="password" value="<%out.println(listAir.get(0).getPassengerPassword());%>" required>
     </div>
     <div class="input">
         <label for="natio">Национальность</label>
