@@ -28,7 +28,7 @@
 <form action="/demo_war_exploded/UpdateLuggageServlet?id=<%out.println(listAir.get(0).getLuggageId());%>" method="post">
     <div class="input">
         <label for="kg">Вес</label>
-        <input type="text" name="kg" id="kg" value="<%out.println(listAir.get(0).getLuggageWeight());%>" required>
+        <input type="number" name="kg" id="kg" value="<%out.println(listAir.get(0).getLuggageWeight());%>" required>
     </div>
     <div class="input">
         <label class="passenger">Выберете пассажира: </label>

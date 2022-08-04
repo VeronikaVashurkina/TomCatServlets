@@ -47,7 +47,7 @@
     </div>
     <div class="input">
         <label for="password">Паспорт</label>
-        <input type="text" name="password" id="password" required>
+        <input type="number" name="password" id="password" required>
     </div>
     <div class="input">
         <label for="natio">Национальность</label>
